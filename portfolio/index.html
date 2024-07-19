@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chukka Abhinay </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="#" class="logo"> Chukka Abhinay </a>
+        <i class='bx bx-menu' id="menu"></i>
+        <nav class="navbar">
+            <a href="@home" class="so">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="cursor"></div>
+
+    <script>
+
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top :" + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+
+            }, 500)
+        })
+
+    </script>
+
+
+    <!-- for home -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, myself</h3>
+            <h1>Chukka Abhinay</h1>
+            <h3>and i'am a <span></span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sed non optio id voluptates at, nemo
+                quibusdam
+                omnis placeat suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum suscipit
+                quibusdam soluta aut illo quo excepturi optio id praesentium eius!</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                <!-- <a href="#"></a> -->
+            </div>
+            <a href="#" class="cv">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="data:image/png;base64,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"
+                alt="">
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-img"> 
+    <img src=" " alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>me</span></h2>
+            <h3>Frontend </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo similique, harum facilis itaque aperiam in
+                sequi repellat eaque! Earum rerum id quo debitis nihil vero officia nobis sapiente blanditiis veritatis
+                expedita quia nisi, laborum reiciendis sed tempora repudiandae. Perferendis voluptatibus officiis quia
+                cupiditate fugit omnis aliquid?</p>
+            <a href="#" class="cv">Read More</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">our <span>services</span></h2>
+
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bxs-palette'></i>
+                <h3>Digital Artist</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quis quia eveniet ut delectus repellat
+                    numquam possimus quod assumenda quae, cum quam debitis officiis quisquam ratione dolores
+                    consectetur? so </p>
+                <a href="" class="cv"> Read More</a>
+            </div>
+
+
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quis quia eveniet ut delectus repellat
+                    numquam possimus quod assumenda quae, cum quam debitis officiis quisquam ratione dolores
+                    consectetur?</p>
+                <a href="" class="cv"> Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxs-bank'></i>
+                <h3>Entrepreneur</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quis quia eveniet ut delectus repellat
+                    numquam possimus quod assumenda quae, cum quam debitis officiis quisquam ratione dolores
+                    consectetur?</p>
+                <a href="" class="cv"> Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Art work</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="img/art.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Artist</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio ea voluptates
+                        laudantium consequatur harum aspernatur!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="img/art 2.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Wed Develope</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio ea voluptates
+                        laudantium consequatur harum aspernatur!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="img/art 4.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Stock Marketing</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio ea voluptates
+                        laudantium consequatur harum aspernatur!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="img/art 3.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>art</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio ea voluptates
+                        laudantium consequatur harum aspernatur!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="img/art 5.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Stock Marketing</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio ea voluptates
+                        laudantium consequatur harum aspernatur!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/art 6.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Stock Marketing</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio ea voluptates
+                        laudantium consequatur harum aspernatur!</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contant <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full the form">
+                <input type="email" placeholder="Email Address">
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Moblie Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" class="" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="cv">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>I Hope you guys enjoy! coperights:2023</p>
+        </div>
+        <div class="footer-icon">
+            <a href="#home"><i class='bx bx-up-arrow-circle'></i></a>
+        </div>
+    </footer>
+
+
+    <link rel="stylesheet" href="style.js">
+</body>
+
+</html>
